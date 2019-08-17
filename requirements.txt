@@ -1,3 +1,5 @@
 Flask
 flask-restful
 gunicorn
+requests
+wiotp-sdk

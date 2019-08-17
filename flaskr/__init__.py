@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 from flask_restful import Resource, Api
 
 from flaskr.controller.HelloController import HelloController
+from flaskr.controller.MLController import MLController
 
 def create_app(test_config=None):
     # create and configure the app
@@ -9,11 +10,7 @@ def create_app(test_config=None):
     api = Api(app)
     
     api.add_resource(HelloController, '/hello')
-
-    # a simple page that says hello
-    # @app.route('/hello2', methods=['GET'])
-    # def hello2():
-    #     return 'Hello, World!'
+    api.add_resource(MLController, '/ml')
 
     return app
 
